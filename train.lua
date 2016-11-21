@@ -19,9 +19,6 @@ cmd:option('-h5_file', 'coco.h5')
 cmd:option('-padding_type', 'reflect-start')
 cmd:option('-resume_from_checkpoint', '')
 
--- Upsampling options
-cmd:option('-upsample_factor', 4)
-
 -- Optimization
 cmd:option('-num_iterations', 50000)
 cmd:option('-max_train', -1)
