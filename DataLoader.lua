@@ -1,3 +1,6 @@
+--[[
+  Modified dataloader to load normalized YUV
+--]]
 require 'torch'
 require 'hdf5'
 require 'image'
