@@ -1,5 +1,6 @@
 # neural-colorization
 Feed-forward neural network for image colorization. Based on [Johnson's network structure](https://github.com/jcjohnson/fast-neural-style)      
+A part of [our course project](https://github.com/Lyken17/CMPT-419-Proj) for SFU Machine Learning.   
 ![Result](https://cloud.githubusercontent.com/assets/4648756/20504440/4067e0f6-affc-11e6-88e7-26de6f5c1cce.jpg)
   
 ## Setup  
