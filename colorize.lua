@@ -17,7 +17,7 @@ directory of images.
 local cmd = torch.CmdLine()
 
 -- Model options
-cmd:option('-model', 'checkpoint.t7')
+cmd:option('-model', 'model.t7')
 
 -- Input / output options
 cmd:option('-input_image', '')
