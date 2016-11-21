@@ -26,7 +26,6 @@ cmd:option('-batch_size', 30)
 cmd:option('-learning_rate', 1e-3)
 cmd:option('-lr_decay_every', 3000)
 cmd:option('-lr_decay_factor', 0.5)
-cmd:option('-weight_decay', 0)
 
 -- Checkpointing
 cmd:option('-checkpoint_name', 'checkpoint')
@@ -90,10 +89,6 @@ function main()
     grad_out = criterion:backward(out, y)
     -- Run model backward
     model:backward(x, grad_out)
-
-    -- Add regularization
-    -- grad_params:add(opt.weight_decay, params)
- 
     return loss, grad_params
   end
 
@@ -169,6 +164,5 @@ function main()
   end
 
 end
-
 
 main()
