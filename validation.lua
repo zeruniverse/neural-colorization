@@ -65,6 +65,4 @@ function main()
   print(string.format('val loss = %f', val_loss))
 
 end
-
-
 main()
