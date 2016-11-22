@@ -36,7 +36,7 @@ The python script recursively checks all image files (including images in sub-di
 
 ```bash
 python make_dataset.py --train_dir train --val_dir validation --output_file dataset.h5
-th train.lua -h5_file dataset.h5 -checkpoint_name model.t7 -gpu 0
+th train.lua -h5_file dataset.h5 -checkpoint_name model -gpu 0
 ```
   
 To compute the prediction error of your model in validation dataset, use `validation.lua`.  
