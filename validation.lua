@@ -61,7 +61,7 @@ function main()
   end
   val_loss = val_loss / loader.num_minibatches['val']
   -- val_loss above is for UV loss. Need YUV loss
-  val_loss = val_loss * 2.0 / 3.0
+  -- val_loss = val_loss * 2.0 / 3.0
   print(string.format('val loss = %f', val_loss))
 
 end
