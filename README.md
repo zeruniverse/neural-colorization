@@ -17,7 +17,7 @@ luarocks install cudnn
 ```
   
 ## Colorize images  
-Assume you want to colorize image `input.jpg` and store result image as `output.png`  
+Assume you want to colorize image `input.jpg` and save result image as `output.png`  
   
 ```bash
 #Download pre-trained model
@@ -31,7 +31,7 @@ th colorize.lua -model model.t7 -input_dir input -output_dir output -gpu 0
 ```
 
 ## Train your own model  
-Assume you all your training data are in `train` and validation data are in `validation`.   
+Suppose all your training data is in `train` and validation data is in `validation`.   
 The python script recursively checks all image files (including images in sub-directory) and throw all gray ones.  
 
 ```bash
