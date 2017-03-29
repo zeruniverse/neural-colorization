@@ -1,5 +1,5 @@
 # neural-colorization
-Feed-forward neural network for image colorization. Based on [Johnson's network structure](https://github.com/jcjohnson/fast-neural-style)      
+Feed-forward neural network for image colorization based on [Johnson's network structure](https://github.com/jcjohnson/fast-neural-style).
 
 ![Result](https://cloud.githubusercontent.com/assets/4648756/20504440/4067e0f6-affc-11e6-88e7-26de6f5c1cce.jpg)
   
@@ -17,7 +17,7 @@ luarocks install cudnn
 ```
   
 ## Colorize images  
-Assume you want to colorize image `input.jpg` and save result image as `output.png`  
+Assume you want to colorize image `input.jpg` and save resulting image as `output.png`  
   
 ```bash
 #Download pre-trained model
@@ -31,8 +31,8 @@ th colorize.lua -model model.t7 -input_dir input -output_dir output -gpu 0
 ```
 
 ## Train your own model  
-Suppose all your training data is in `train` and validation data is in `validation`.   
-The python script recursively checks all image files (including images in sub-directory) and throw all gray ones.  
+Suppose all your training data is in folder `train` and validation data is in folder `validation`.   
+The python script recursively checks all image files and ignore all gray ones.  
 
 ```bash
 python make_dataset.py --train_dir train --val_dir validation --output_file dataset.h5
