@@ -1,0 +1,28 @@
+language: python
+python:
+  - '3.6'
+before_script:
+  - pip install opencv-python
+  - pip install numpy
+  - pip install pillow
+  - pip install scikit-image
+  - pip install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-linux_x86_64.whl
+  - pip install torchvision
+  - pip install scipy
+script:
+  - python -m py_compile model.py
+  - python -m py_compile resize_all_imgs.py
+  - python -m py_compile colorize.py
+  - python -m py_compile build_dataset_directory.py
+  - python -m py_compile train.py
+  - wget -O model.pth "https://github.com/zeruniverse/neural-colorization/releases/download/1.1/G.pth"
+  - wget -O a.jpg "https://avatars1.githubusercontent.com/u/4648756"
+  - mkdir -p train_raw_folder/random/arbitrary
+  - cp a.jpg train_raw_folder/random/arbitrary/0.jpg
+  - cp a.jpg train_raw_folder/random/arbitrary/1.jpeg
+  - python build_dataset_directory.py -i train_raw_folder -o train
+  - python resize_all_imgs.py -d train
+  - ls train
+  - python colorize.py -i a.jpg -o aa.jpg -m model.pth
+after_script:
+  - ls -lh aa.jpg
