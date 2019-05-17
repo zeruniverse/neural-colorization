@@ -106,7 +106,7 @@ G = generator().cuda(args.gpu)
 
 # define D
 D = models.resnet18(pretrained=False,num_classes=2)
-D.fc = nn.Sequential(nn.Linear(2048, 1), nn.Sigmoid())
+D.fc = nn.Sequential(nn.Linear(512, 1), nn.Sigmoid())
 D = D.cuda(args.gpu)
 
 trainset = img_data(args.training_dir)
